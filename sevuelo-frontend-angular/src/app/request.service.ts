@@ -33,6 +33,7 @@ export class RequestService {
   }
 
   addRequest(request: Request): Observable<Request> {
+    console.log(request);
     return this.http.post<Request>(`${this.url}/requests`, request, this.httpOptions);
   }
 

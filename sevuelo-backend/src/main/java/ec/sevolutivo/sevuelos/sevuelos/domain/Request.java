@@ -36,6 +36,18 @@ public class Request implements Serializable {
     @Column(name = "status", nullable = false)
     private RequestStatus status;
 
+    @Size(max = 100)
+    @Column(name = "comment")
+    private String comment;
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
     public Long getId() {
         return id;
     }

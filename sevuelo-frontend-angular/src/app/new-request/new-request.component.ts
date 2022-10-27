@@ -29,8 +29,9 @@ export class NewRequestComponent implements OnInit {
   save(): void {
 
     this.requestService.addRequest(this.request)
-      .subscribe((newRequest) => {
-        this.request = newRequest
+    .subscribe((newRequest) => {
+      this.request = newRequest
+      console.log(this.request);
         this.router.navigate(['/requests']);
       }
     );
